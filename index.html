@@ -54,7 +54,9 @@
     </div>
   </body>
   <script>
+    let firstCheck = true;
     function startLottery() {
+      if(firstCheck){
       const resultText = document.getElementById("result-text");
       const lotteryImage = document.getElementById("lottery-image");
       const firstText = document.getElementById("first_text");
@@ -84,6 +86,9 @@
         // 添加animate__bounceIn类，使新图像出现
         // lotteryImage.classList.add("animate__animated", "animate__bounceIn");
       });
+
+        firstCheck= false;
+      }
 
       // 添加animationend事件监听器，确保在动画结束后执行回调
     }
